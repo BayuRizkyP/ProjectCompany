@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Index - Logis Bootstrap Template</title>
+    <title>Home - DimCargo</title>
     <meta name="description" content="" />
     <meta name="keywords" content="" />
 
@@ -68,15 +68,60 @@
   }
 }
 
-  #hero {
+#hero {
   margin-bottom: 0; /* Hilangkan margin di bawah hero section */
   padding-bottom: 0; /* Hilangkan padding di bawah hero section jika ada */
 }
-
-#about {
-  margin-top: 0; /* Hilangkan margin di atas about section */
-  padding-top: 0; /* Hilangkan padding di atas about section jika ada */
+#features {
+  padding: 60px 0;
+  background-color: #f9f9f9;
 }
+
+.section-title span {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ff7f00;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.section-title p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.client-logo {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.client-logo img {
+  max-width: 100%;
+  height: auto;
+  filter: grayscale(0%); /* Awalnya gambar berwarna penuh */
+  transition: filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.client-logo:hover img {
+  filter: grayscale(100%); /* Gambar menjadi grayscale saat hover */
+  transform: scale(1.1); /* Zoom ringan saat hover */
+}
+
+.client-logo:hover {
+  transform: scale(1.05); /* Efek zoom tambahan pada logo secara keseluruhan */
+}
+
+
 
 </style>
     <!-- Vendor CSS Files -->
@@ -105,7 +150,7 @@
         <a href="index.html" class="logo d-flex align-items-center me-auto">
           <!-- Uncomment the line below if you also wish to use an image logo -->
           <!-- <img src="assets/img/logo.png" alt=""> -->
-          <h1 class="sitename">DimCargo</h1>
+          <img src="assets/img/Logo fix.png" alt="">
         </a>
 
         <nav id="navmenu" class="navmenu">
@@ -144,7 +189,6 @@
     <video autoplay loop muted>
       <source src="highway-loop.mp4" type="video/mp4" />
     </video>
-
     <!-- Tambahkan div untuk teks di tengah-tengah video -->
     <div class="video-overlay-content">
       <h1>Welcome to DimCargo Logistics</h1>
@@ -159,38 +203,18 @@
           <div class="row gy-4">
             <div class="col-lg-6 position-relative align-self-start order-lg-last order-first" data-aos="fade-up" data-aos-delay="200">
               <img src="assets/img/about.jpg" class="img-fluid" alt="" />
-              <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox pulsating-play-btn"></a>
+              <!-- <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox pulsating-play-btn"></a> -->
             </div>
 
             <div class="col-lg-6 content order-last order-lg-first" data-aos="fade-up" data-aos-delay="100">
-              <h1 style="font-weight: bold;">About Us</h1>
-             <p style="font-size: 20px; text-align: justify;">
-                   DimCargo Logistics is a freight forwarding company with independence and privately company commenced operations in Jakarta on centre of business and government in 2020 in Indonesia, we’ve grown into a dynamic and potent force, specializing in efficient solutions across sea and air..
+              <h1 style="font-weight: bold;">Who is Link DimCargo Logistics?</h1>
+              <br>
+             <p style="font-size: 30px; text-align: justify;">
+                   DimCargo Logistics is a freight forwarding company with independence and privately company commenced operations in Jakarta on centre of business and government in 2020 in Indonesia.
               </p>
-              <!-- <ul>
-                <li>
-                  <i class="bi bi-diagram-3"></i>
-                  <div>
-                    <h5>Ullamco laboris nisi ut aliquip consequat</h5>
-                    <p>Magni facilis facilis repellendus cum excepturi quaerat praesentium libre trade</p>
-                  </div>
-                </li>
-                <li>
-                  <i class="bi bi-fullscreen-exit"></i>
-                  <div>
-                    <h5>Magnam soluta odio exercitationem reprehenderi</h5>
-                    <p>Quo totam dolorum at pariatur aut distinctio dolorum laudantium illo direna pasata redi</p>
-                  </div>
-                </li>
-                <li>
-                  <i class="bi bi-broadcast"></i>
-                  <div>
-                    <h5>Voluptatem et qui exercitationem</h5>
-                    <p>Et velit et eos maiores est tempora et quos dolorem autem tempora incidunt maxime veniam</p>
-                  </div>
-                </li>
-              </ul> -->
-                <p><a href="#" class="btn btn-primary px-4 py-2 text-white">Learn More</a></p>
+                <br>
+                <br>
+                <p><a href="about.html" class="btn btn-primary px-5 py-3 text-white">Read More</a></p>
             </div>
           </div>
         </div>
@@ -234,7 +258,7 @@
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
               <div class="card">
                 <div class="card-img">
-                  <img src="assets/img/service-4.jpg" alt="" class="img-fluid" />
+                  <img src="assets/img/jumbo-jet-flying-sky (2).jpg" alt="" class="img-fluid" />
                 </div>
                 <h3><a href="AirFreight.html" class="stretched-link">AIR FREIGHT</a></h3>
                 <p>Over our wide network of air routes, DimCargo can deliver your cargo anywhere in the city in a matter of hours. We offer direct service from most major Indonesia airports, ensuring the safe delivery of your air freight on time, every time.</p>
@@ -298,81 +322,85 @@
       <!-- /Call To Action Section -->
 
       <!-- Features Section -->
-      <section id="features" class="features section">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
+<section id="features" class="features section">
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
           <span>Our Client</span>
           <h2>Our Client</h2>
           <p>We have clients who use trucking services for both import and export purposes, as well as clients who utilize trucking solely for import or export activities.</p>
-        </div>
+  </div>
         <!-- End Section Title -->
 
-        <div class="container">
-          <div class="row gy-4 align-items-center features-item">
-            <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
-              <img src="assets/img/features-1.jpg" class="img-fluid" alt="" />
-            </div>
-            <div class="col-md-7" data-aos="fade-up" data-aos-delay="100">
-              <ul>
-                <li><i class="bi bi-check"></i><span> PT. GS ELECTECH INDONESIA.</span></li>
-                <li><i class="bi bi-check"></i> <span>PT. SAMUDRA DYAN PRAGA.</span></li>
-                <li><i class="bi bi-check"></i> <span>PT. MAYORA INDONESIA.</span></li>
-                <li><i class="bi bi-check"></i><span> PT. PUTRA ABADI TRANS.</span></li>
-                <li><i class="bi bi-check"></i> <span>PT. WOOK GLOBAL TECHNOLOGY.</span></li>
-              </ul>
-            </div>
-          </div>
-          <!-- Features Item -->
+  <div class="container">
+    <div class="row no-gutters clients-wrap clearfix justify-content-center">
+      <!-- First Row of Client Logos -->
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 client-logo" data-aos="fade-up" data-aos-delay="100">
+        <img src="assets/img/client/LOGO-SDP-WARNA_PNG.png" class="img-fluid" alt="Zilingo Trade">
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 client-logo" data-aos="fade-up" data-aos-delay="200">
+        <img src="assets/img/client/siemens.png" class="img-fluid" alt="Ekosis Mart">
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 client-logo" data-aos="fade-up" data-aos-delay="300">
+        <img src="assets/img/client/indorama.jpg" class="img-fluid" alt="Tempo Scan">
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 client-logo" data-aos="fade-up" data-aos-delay="400">
+        <img src="assets/img/client/putra abadi trans.gif" class="img-fluid" alt="Bukalapak">
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 client-logo" data-aos="fade-up" data-aos-delay="500">
+        <img src="assets/img/client/SBL.png" class="img-fluid" alt="Tokopedia">
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 client-logo" data-aos="fade-up" data-aos-delay="500">
+        <img src="assets/img/client/jagcargo.png" class="img-fluid" alt="Tokopedia">
+      </div>
+    </div>
 
-          <div class="row gy-4 align-items-center features-item">
-            <div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-              <img src="assets/img/features-2.jpg" class="img-fluid" alt="" />
-            </div>
-            <div class="col-md-7 order-2 order-md-1" data-aos="fade-up" data-aos-delay="200">
-               <ul>
-                <li><i class="bi bi-check"></i><span> PT.SIEMENS INDONESIA.</span></li>
-                <li><i class="bi bi-check"></i> <span>PT. AMTEX INDONESIA.</span></li>
-                <li><i class="bi bi-check"></i><span>PT. SCHLEMMER AUTOMOTIVE INDONESIA.</span></li>
-                <li><i class="bi bi-check"></i> <span>PT. COCA COLA.</span></li>
-                <li><i class="bi bi-check"></i> <span>PT. JAVA AGRO TIMBER INVESTAMA.</span></li>
-              </ul>
-            </div>
-          </div>
-          <!-- Features Item -->
+    <div class="row no-gutters clients-wrap clearfix justify-content-center mt-4">
+      <!-- Second Row of Client Logos -->
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 client-logo" data-aos="fade-up" data-aos-delay="100">
+        <img src="assets/img/client/Pertamina.png" class="img-fluid" alt="Starbucks">
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 client-logo" data-aos="fade-up" data-aos-delay="200">
+        <img src="assets/img/client/cocacola.jpg" class="img-fluid" alt="Synnex">
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 client-logo" data-aos="fade-up" data-aos-delay="300">
+        <img src="assets/img/client/panca traktor indonesia.png" class="img-fluid" alt="Hino">
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 client-logo" data-aos="fade-up" data-aos-delay="400">
+        <img src="assets/img/client/PT Kawasan Berikat Nusantara Mengelola Kawasan Industri Terpadu.png" class="img-fluid" alt="Enseval">
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 client-logo" data-aos="fade-up" data-aos-delay="500">
+        <img src="assets/img/client/Logo_Samudera_Indonesia_PT.png" class="img-fluid" alt="Penerbit Erlangga">
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 client-logo" data-aos="fade-up" data-aos-delay="600">
+        <img src="assets/img/client/amtech.png" class="img-fluid" alt="Mekar">
+      </div>
+    </div>
 
-          <div class="row gy-4 align-items-center features-item">
-            <div class="col-md-5 d-flex align-items-center" data-aos="zoom-out">
-              <img src="assets/img/features-3.jpg" class="img-fluid" alt="" />
-            </div>
-            <div class="col-md-7" data-aos="fade-up">
-              <ul>
-                <li><i class="bi bi-check"></i> <span>PT. INDO RANA JAYA.</span></li>
-                <li><i class="bi bi-check"></i><span> PT. KAWASAN BeRIKAT NUSANTARA.</span></li>
-                <li><i class="bi bi-check"></i> <span>PT. PERTAMINA</span>.</li>
-                <li><i class="bi bi-check"></i><span> PT. SINAR BARU LOGISTIK.</span></li>
-                <li><i class="bi bi-check"></i> <span>PT. PANCA TRAKTOR INDONESIA.</span></li>
-              </ul>
-            </div>
-          </div>
-          <!-- Features Item -->
-<!-- 
-          <div class="row gy-4 align-items-center features-item">
-            <div class="col-md-5 order-1 order-md-2 d-flex align-items-center" data-aos="zoom-out">
-              <img src="assets/img/features-4.jpg" class="img-fluid" alt="" />
-            </div>
-            <div class="col-md-7 order-2 order-md-1" data-aos="fade-up">
-              <ul>
-                <li><i class="bi bi-check"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
-                <li><i class="bi bi-check"></i><span> Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
-                <li><i class="bi bi-check"></i> <span>Facilis ut et voluptatem aperiam. Autem soluta ad fugiat</span>.</li>
-                <li><i class="bi bi-check"></i><span> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
-                <li><i class="bi bi-check"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
-              </ul>
-            </div>
-          </div> -->
-          <!-- Features Item -->
-        </div>
-      </section>
+    <div class="row no-gutters clients-wrap clearfix justify-content-center mt-4">
+      <!-- three Row of Client Logos -->
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 client-logo" data-aos="fade-up" data-aos-delay="100">
+        <img src="assets/img/client/schalamer.png" class="img-fluid" alt="Starbucks">
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 client-logo" data-aos="fade-up" data-aos-delay="200">
+        <img src="assets/img/client/wooki.png" class="img-fluid" alt="Synnex">
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 client-logo" data-aos="fade-up" data-aos-delay="300">
+        <img src="assets/img/client/pt java agro.png" class="img-fluid" alt="Hino">
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 client-logo" data-aos="fade-up" data-aos-delay="400">
+        <img src="assets/img/client/Logo CAU.png" class="img-fluid" alt="Enseval">
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 client-logo" data-aos="fade-up" data-aos-delay="600">
+        <img src="assets/img/client/mayora.png" class="img-fluid" alt="Shopee">
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-4 col-6 client-logo" data-aos="fade-up" data-aos-delay="600">
+        <img src="assets/img/client/hitachi.png" class="img-fluid" alt="Shopee">
+      </div>
+    </div>
+  </div>
+</section>
+
+
       <!-- /Features Section -->
 
       <!-- Pricing Section -->

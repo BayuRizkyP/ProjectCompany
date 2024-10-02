@@ -37,6 +37,71 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Container styling */
+    .about {
+      padding: 60px 0;
+      background-color: #f8f9fa;
+    }
+
+    /* About Us Section */
+    .about h3 {
+      font-size: 79px;
+      font-weight: bold;
+      color: #002060;
+      margin-bottom: 20px;
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Styling for paragraph */
+    .about p {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #555;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    /* Hover effect for paragraph */
+    .about p:hover {
+      transform: scale(1.05);
+    }
+
+    /* Image styling */
+    .about img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .about img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Make the layout responsive */
+    @media (max-width: 768px) {
+      .about h3 {
+        font-size: 28px;
+      }
+
+      .about p {
+        font-size: 16px;
+      }
+    }
+  </style>
   </head>
 
   <body class="about-page">
@@ -51,9 +116,9 @@
         <nav id="navmenu" class="navmenu">
           <ul>
             <li>
-              <a href="index.html" class="active">Home<br /></a>
+              <a href="index.html" >Home<br /></a>
             </li>
-            <li><a href="about.html">About</a></li>
+            <li><a href="about.html" class="active">About</a></li>
             <li class="dropdown">
               <a href="#">Services <i class="bi bi-chevron-down toggle-dropdown"></i></a>
               <ul>
@@ -99,7 +164,7 @@
           <div class="row gy-4">
             <div class="col-lg-6 position-relative align-self-start order-lg-last order-first" data-aos="fade-up" data-aos-delay="200">
               <img src="assets/img/about.jpg" class="img-fluid" alt="" />
-              <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox pulsating-play-btn"></a>
+              <!-- <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox pulsating-play-btn"></a> -->
             </div>
 
             <div class="col-lg-6 content order-last order-lg-first" data-aos="fade-up" data-aos-delay="100">
@@ -158,47 +223,47 @@
       </section>
 
       <!-- Stats Section -->
-      <section id="vision-mission" class="vision-mission section">
-        <div class="container">
-          <div class="row">
+      <section id="vision-mission" class="vision-mission section" style="background: linear-gradient(135deg, #007bff 0%, #6c757d 100%); padding: 60px 0;">
+    <div class="container">
+        <div class="row">
             <!-- Kolom Visi -->
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-              <div class="vision-content">
-                <h3>Vision DimCargo</h3>
-                <p>Build up customer relationship with integrity and ethics in order to achieve our goals and keep standing in the competitive global market.</p>
-              </div>
+                <div class="vision-content text-center p-4" style="border: 1px solid #fff; border-radius: 10px; background-color: rgba(255, 255, 255, 0.9); box-shadow: 0 8px 16px rgba(0,0,0,0.2);">
+                    <h3 style="font-size: 32px; color: #007bff; font-weight: bold; margin-bottom: 20px;">Vision DimCargo</h3>
+                    <p style="font-size: 18px; color: #555;">Build up customer relationships with integrity and ethics to achieve our goals and remain competitive in the global market.</p>
+                </div>
             </div>
 
             <!-- Kolom Misi -->
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-              <div class="mission-content">
-                <h3>Mision Dimcargo</h3>
-                <div class="mission-item">
-                  <span class="mission-number">01</span>
-                  <p>
-                    We have a standard operational procedure to handle Sea, Air or even inland transportation and we upgrading always the innovative system that will help customer to manage their full range global logistics needs. We call
-                    “We make it simple for your delivery needs”.
-                  </p>
+                <div class="mission-content">
+                    <h3 style="font-size: 32px; color: #007bff; font-weight: bold; text-align: center; margin-bottom: 20px;">Mission Dimcargo</h3>
+                    <div class="mission-item d-flex align-items-start mb-4 p-3" style="border: 1px solid #fff; border-radius: 10px; background-color: rgba(255, 255, 255, 0.9); box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+                        <span class="mission-number" style="font-size: 24px; font-weight: bold; color: #007bff; margin-right: 15px;">01</span>
+                        <div>
+                            <i class="bi bi-truck" style="font-size: 24px; color: #007bff; margin-bottom: 5px;"></i>
+                            <p style="font-size: 16px; color: #555;">We have a standard operational procedure to handle Sea, Air, or even inland transportation, constantly upgrading our innovative system to help customers manage their global logistics needs. “We make it simple for your delivery needs.”</p>
+                        </div>
+                    </div>
+                    <div class="mission-item d-flex align-items-start mb-4 p-3" style="border: 1px solid #fff; border-radius: 10px; background-color: rgba(255, 255, 255, 0.9); box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+                        <span class="mission-number" style="font-size: 24px; font-weight: bold; color: #007bff; margin-right: 15px;">02</span>
+                        <div>
+                            <i class="bi bi-laptop" style="font-size: 24px; color: #007bff; margin-bottom: 5px;"></i>
+                            <p style="font-size: 16px; color: #555;">To keep pace with technological developments in transportation, we invest considerably in computerizing our offices, providing a competitive edge and a higher standard of service, utilizing EDI Solutions for our large overseas partners and local clients.</p>
+                        </div>
+                    </div>
+                    <div class="mission-item d-flex align-items-start mb-4 p-3" style="border: 1px solid #fff; border-radius: 10px; background-color: rgba(255, 255, 255, 0.9); box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+                        <span class="mission-number" style="font-size: 24px; font-weight: bold; color: #007bff; margin-right: 15px;">03</span>
+                        <div>
+                            <i class="bi bi-person-check" style="font-size: 24px; color: #007bff; margin-bottom: 5px;"></i>
+                            <p style="font-size: 16px; color: #555;">We believe that to give our clients superior confidence, ‘HUMAN RESOURCE MANAGEMENT IS THE KEY’. All our staff are well-trained to handle your consignment with care from origin to final destination, regardless of transportation mode.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="mission-item">
-                  <span class="mission-number">02</span>
-                  <p>
-                    To keep up with the rapid pace to technological developments in the transportation industry, we have invested considerable amounts of capital into computerizing our offices. This gives us a competitive edge and a higher
-                    standard of service compared to other and enables us to utilize EDI Solusions for our large, overseas partners, as well as our local clients.
-                  </p>
-                </div>
-                <div class="mission-item">
-                  <span class="mission-number">03</span>
-                  <p>
-                    We believe that in order to give our clients superior confidence in us, ‘HUMAN RESOURCE MANAGEMENT IS THE KEY’. All our’s staff and personels are well trained and acknowledge able to handle your consignment with goods
-                    care from origin to the final destination that your required , whether the shipment by sea, air, road, rail or combine mode of transportation.
-                  </p>
-                </div>
-              </div>
             </div>
-          </div>
         </div>
-      </section>
+    </div>
+</section>
 
       <!-- /Stats Section -->
 
