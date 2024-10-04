@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Pricing - Logis Bootstrap Template</title>
+    <title>Our Client</title>
     <meta name="description" content="" />
     <meta name="keywords" content="" />
 
     <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/Logoicon.png" rel="icon" />
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
     <!-- Fonts -->
@@ -19,116 +19,56 @@
       rel="stylesheet"
     />
   <style>
+.onlytrucking {
+    background-color: #e9ecef; /* Warna latar belakang untuk section */
+    padding: 60px 0; /* Ruang atas dan bawah section */
+}
 
-      #onlytrucking {
-        background-color: #f8f9fa;
-        padding: 60px 0;
-    }
+.section-title {
+    text-align: center; /* Pusatkan teks */
+    margin-bottom: 40px; /* Ruang di bawah judul section */
+}
 
-    .section-title span {
-        display: block;
-        font-size: 18px;
-        color: #007bff;
-        font-weight: bold;
-    }
+.client-item {
+    background: #ffffff; /* Latar belakang item klien */
+    border: 2px solid #007bff; /* Garis batas dengan warna biru */
+    border-radius: 10px; /* Sudut melengkung */
+    padding: 30px; /* Ruang di dalam item */
+    text-align: center; /* Teks di tengah */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animasi transisi */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan default */
+    position: relative; /* Posisi relatif untuk animasi */
+    overflow: hidden; /* Menyembunyikan bagian luar dari item */
+}
 
-    .section-title h2 {
-        font-size: 36px;
-        font-weight: 700;
-        margin-bottom: 20px;
-        color: #333;
-        position: relative;
-    }
+.client-item h3 {
+    margin: 0; /* Hapus margin default dari judul */
+    font-size: 1.2rem; /* Ukuran font untuk judul klien */
+    color: #007bff; /* Warna font */
+}
 
-    .section-title h2::before {
-        content: "";
-        position: absolute;
-        width: 50px;
-        height: 3px;
-        background-color: #007bff;
-        bottom: -10px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
+.client-item:hover {
+    transform: translateY(-10px) scale(1.05); /* Mengangkat dan memperbesar item */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Bayangan lebih besar saat hover */
+}
 
-    .client-item {
-        background: white;
-        border-radius: 10px;
-        padding: 30px;
-        text-align: center;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease;
-    }
+.client-item::before {
+    content: ""; /* Menambahkan konten sebelum */
+    position: absolute; /* Posisi absolut */
+    top: 0; /* Jarak dari atas */
+    left: 50%; /* Pusatkan dari kiri */
+    width: 300%; /* Lebar lebih dari 100% untuk efek */
+    height: 100%; /* Tinggi 100% */
+    background: rgba(0, 123, 255, 0.1); /* Latar belakang biru transparan */
+    transition: transform 0.5s ease; /* Animasi transisi */
+    transform: translateX(-50%) translateY(-100%); /* Awalnya di atas */
+}
 
-    .client-item h3 {
-        font-size: 22px;
-        font-weight: 600;
-        margin-bottom: 15px;
-        color: #333;
-    }
+.client-item:hover::before {
+    transform: translateX(-50%) translateY(0); /* Gerakan ke bawah saat hover */
+}
 
-    .client-description {
-        font-size: 16px;
-        color: #666;
-    }
 
-    .client-item:hover {
-        transform: scale(1.05);
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-    }
-
-    @media (max-width: 768px) {
-        .client-item {
-            margin-bottom: 20px;
-        }
-    }
-    
-    .clients-list {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .client-item {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background-color: #f9f9f9;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .client-text {
-        max-width: 60%;
-    }
-
-    .client-photo img {
-        max-width: 120px;
-        border-radius: 8px;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    }
-     .client-item {
-        text-align: center;
-        background-color: #f9f9f9;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease;
-    }
-
-    .client-item:hover {
-        transform: scale(1.05);
-    }
-
-    .client-image {
-        width: 100%;
-        max-width: 200px;
-        height: auto;
-        margin-top: 10px;
-        border-radius: 8px;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    }
 </style>
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
@@ -156,7 +96,7 @@
         <a href="index.html" class="logo d-flex align-items-center me-auto">
           <!-- Uncomment the line below if you also wish to use an image logo -->
           <!-- <img src="assets/img/logo.png" alt=""> -->
-          <h1 class="sitename">DimCargo</h1>
+          <img src="assets/img/Logo fix.png" alt="">
         </a>
 
         <nav id="navmenu" class="navmenu">
@@ -221,99 +161,128 @@
             <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
                 <div class="client-item">
                     <h3>PT. ARYO BIMA NUSANTARA</h3>
-                    <p class="client-description">One of the leading companies in trucking and logistics services.</p>
                 </div>
             </div>
             <!-- Client Item 2 -->
             <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
                 <div class="client-item">
                     <h3>PT. INDORAMA SYNTHETICS Tbk.</h3>
-                    <p class="client-description">Specializing in manufacturing and transporting synthetic fibers worldwide.</p>
                 </div>
             </div>
             <!-- Client Item 3 -->
             <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
-                <div class="client-item">
-                    <h3>CV. JALDI KANAKA</h3>
-                    <p class="client-description">Focused on fast and reliable trucking services across regions.</p>
+                 <div class="client-item">
+                    <h3>PT. KAWASAN BERIKAT NUSANTARA</h3>
                 </div>
             </div>
             <!-- Client Item 4 -->
             <div class="col-lg-4" data-aos="fade-up" data-aos-delay="400">
                 <div class="client-item">
                     <h3>PT. PUTRA ABADI TRANS</h3>
-                    <p class="client-description">Expert in cargo transportation with a strong commitment to timeliness.</p>
                 </div>
             </div>
             <!-- Client Item 5 -->
             <div class="col-lg-4" data-aos="fade-up" data-aos-delay="500">
                 <div class="client-item">
                     <h3>PT. SINAR BARU LOGISTIK</h3>
-                    <p class="client-description">Providing high-quality logistics solutions with a customer-first approach.</p>
                 </div>
             </div>
             <!-- Client Item 6 -->
             <div class="col-lg-4" data-aos="fade-up" data-aos-delay="600">
                 <div class="client-item">
                     <h3>PT. TRANSMEGA LOGISTIK INDONESIA</h3>
-                    <p class="client-description">Leader in integrated logistics services across the country.</p>
                 </div>
             </div>
             <!-- Client Item 7 -->
             <div class="col-lg-4" data-aos="fade-up" data-aos-delay="700">
                 <div class="client-item">
                     <h3>PT. MAYORA INDONESIA</h3>
-                    <p class="client-description">Delivering top-quality consumer goods and excelling in supply chain efficiency.</p>
                 </div>
             </div>
             <!-- Client Item 8 -->
             <div class="col-lg-4" data-aos="fade-up" data-aos-delay="800">
                 <div class="client-item">
                     <h3>PT. PERTAMINA</h3>
-                    <p class="client-description">A major player in Indonesia's oil and gas logistics and distribution services.</p>
                 </div>
             </div>
             <!-- Client Item 9 -->
             <div class="col-lg-4" data-aos="fade-up" data-aos-delay="900">
                 <div class="client-item">
                     <h3>PT. COCA COLA</h3>
-                    <p class="client-description">Partnering in efficient and reliable transportation for global beverage logistics.</p>
                 </div>
             </div>
             <!-- Client Item 10 -->
             <div class="col-lg-4" data-aos="fade-up" data-aos-delay="1000">
                 <div class="client-item">
                     <h3>PT. PANCA TRAKTOR INDONESIA</h3>
-                    <p class="client-description">Expert in the transportation of heavy machinery and industrial equipment.</p>
-                </div>
             </div>
             <!-- Client Item 11 -->
-            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="1100">
+            <!-- <div class="col-lg-4" data-aos="fade-up" data-aos-delay="1100">
                 <div class="client-item">
                     <h3>PT. ROXY MEGA UTAMA</h3>
-                    <p class="client-description">Leading the way in logistics solutions for diverse industries.</p>
                 </div>
-            </div>
+            </div> -->
             <!-- Client Item 12 -->
-            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="1200">
+            <!-- <div class="col-lg-4" data-aos="fade-up" data-aos-delay="1200">
                 <div class="client-item">
-                    <h3>PT. KAWASAN BERIKAT NUSANTARA</h3>
-                    <p class="client-description">Providing integrated trucking and logistics services for export-import businesses.</p>
+                    <h3>CV. JALDI KANAKA</h3>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </section>
       <!-- /Pricing Section -->
 
       <!-- Alt Pricing Section -->
-      <section id="alt-pricing" class="alt-pricing section">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <span>Import with trucking<br /></span>
-          <h2>Import with trucking</h2>
-          <p>Our Client Who Use Trucking For Import</p>
+<section id="import" class="import">
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+        <span>Import with trucking<br /></span>
+        <h2>Import with trucking</h2>
+        <p>Our Client Who Use Trucking For Import</p>
+    </div>
+    <!-- End Section Title -->
+
+    <!-- Client List -->
+    <div class="container client-list" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
+            <div class="col-lg-4">
+                <div class="client-item">
+                    <h3>PT. GS ELECTECH INDONESIA</h3>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="client-item">
+                    <h3>PT. SAMUDRA DYAN PRAGA</h3>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="client-item">
+                    <h3>PT. WOOK GLOBAL TECHNOLOGY</h3>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="client-item">
+                    <h3>PT. KIMIKA SOLUSI INDUSTRI</h3>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="client-item">
+                    <h3>PT. AMTEX INDONESIA</h3>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="client-item">
+                    <h3>PT. SIEMENS INDONESIA</h3>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="client-item">
+                    <h3>PT. SCHLEMMER AUTOMOTIVE INDONESIA</h3>
+                </div>
+            </div>
         </div>
+
         <!-- End Section Title -->
 
         <!-- <div class="container">
@@ -379,83 +348,39 @@
         </div>
       </section>
 
-
-
-      <section id="alt-pricing" class="alt-pricing section">
+<!---->
+      <section id="exporttrucking" class="exporttrucking">
     <!-- Section Title -->
     <div class="container section-title" data-aos="fade-up">
-        <span>Import with trucking<br /></span>
-        <h2>Import with trucking</h2>
-        <p>Our Client Who Use Trucking For Import</p>
+        <span>Export with trucking<br /></span>
+        <h2>Export with trucking</h2>
+        <p>Our Client Who Use Trucking For Export</p>
     </div>
+    <!-- End Section Title -->
 
-    <!-- Client List with Images -->
-    <div class="container clients-list" data-aos="fade-up">
-        <div class="client-item">
-            <div class="client-text">
-                <h3>PT. JAVA AGRO TIMBER INVESTAMA</h3>
-                <p>Leading provider of timber products, importing with our reliable trucking services.</p>
+    <!-- Client List -->
+    <div class="container client-list" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
+            <div class="col-lg-4">
+                <div class="client-item">
+                    <h3>PT. JAVA AGRO TIMBER INVESTAMA</h3>
+                </div>
             </div>
-            <div class="client-photo">
-                <img src="assets/img/client/panca traktor indonesia.png" alt="PT. JAVA AGRO TIMBER INVESTAMA" />
+            <div class="col-lg-4">
+                <div class="client-item">
+                    <h3>PT. INDO RANA JAYA</h3>
+                </div>
             </div>
-        </div>
-
-        <div class="client-item">
-            <div class="client-text">
-                <h3>PT. INDO RANA JAYA</h3>
-                <p>A major player in the manufacturing industry, utilizing trucking for swift import processes.</p>
-            </div>
-            <div class="client-photo">
-                <img src="assets/img/client/putra abadi trans.gif" alt="PT. INDO RANA JAYA" />
-            </div>
-        </div>
-
-        <div class="client-item">
-            <div class="client-text">
-                <h3>PT. YABESINDO EMEGRO SINERGI</h3>
-                <p>Trusted by many for importing various goods through efficient trucking logistics.</p>
-            </div>
-            <div class="client-photo">
-                <img src="assets/img/client/hitachi.png" alt="PT. YABESINDO EMEGRO SINERGI" />
+            <div class="col-lg-4">
+                <div class="client-item">
+                    <h3>PT. YABESINDO EMEGRO SINERGI</h3>
+                </div>
             </div>
         </div>
     </div>
+    <!-- End Client List -->
 </section>
-<!---->
-      <section id="alt-pricing" class="alt-pricing section">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <span>Export with trucking<br /></span>
-          <h2>Export with trucking</h2>
-          <p>Our Client Who Use Trucking For Export</p>
-        </div>
-        <!-- End Section Title -->
 
-        <!-- <div class="container">
-          <div class="row gy-4 pricing-item" data-aos="fade-up" data-aos-delay="100">
-            <div class="col-lg-3 d-flex align-items-center justify-content-center">
-              <h3>Free Plan</h3>
-            </div>
-            <div class="col-lg-3 d-flex align-items-center justify-content-center">
-              <h4><sup>$</sup>0<span> / month</span></h4>
-            </div>
-            <div class="col-lg-3 d-flex align-items-center justify-content-center">
-              <ul>
-                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-                <li class="na"><i class="bi bi-x"></i> <span>Pharetra massa massa ultricies</span></li>
-              </ul>
-            </div>
-            <div class="col-lg-3 d-flex align-items-center justify-content-center">
-              <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
-            </div>
-          </div> -->
-          <!-- End Pricing Item -->
-          <!-- End Pricing Item -->
-          <!-- End Pricing Item -->
-        </div>
-      </section>
       <!-- /Alt Pricing Section -->
       <section id="alt-pricing" class="alt-pricing section">
         <!-- Section Title -->
@@ -545,9 +470,4 @@
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
   </body>
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-    AOS.init();
-</script>
 </html>

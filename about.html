@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>About - Logis Bootstrap Template</title>
+    <title>About - DimCargo</title>
     <meta name="description" content="" />
     <meta name="keywords" content="" />
 
     <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/Logoicon.png" rel="icon" />
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
     <!-- Fonts -->
@@ -101,6 +101,119 @@
         font-size: 16px;
       }
     }
+
+/* Animasi untuk seluruh section */
+.values-section {
+    padding: 60px 0;
+    text-align: center;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Flexbox layout */
+.values-section .row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Style value-item */
+.values-section .value-item {
+    flex: 1;
+    min-width: 200px;
+    max-width: 240px;
+    background-color: #0a3365;
+    border-radius: 10px;
+    padding: 20px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: scale(1);
+}
+
+/* Animasi hover */
+.values-section .value-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Warna Huruf besar */
+.values-section .value-item h3 {
+    font-size: 48px;
+    color: #8cd426;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 2;
+    transition: color 0.3s ease;
+}
+
+.values-section .value-item h4 {
+    font-size: 22px;
+    font-weight: 600;
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+}
+
+.values-section .value-item p {
+    font-size: 14px;
+    color: #d1d4e1;
+    position: relative;
+    z-index: 2;
+}
+
+.values-section .value-item hr {
+    border: 0;
+    border-top: 1px solid #d1d4e1;
+    margin: 20px 0;
+    position: relative;
+    z-index: 2;
+}
+
+/* Efek latar belakang animasi */
+.values-section .value-item::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, #8cd426 0%, transparent 70%);
+    transition: all 0.5s ease;
+    z-index: 1;
+    transform: scale(0);
+    opacity: 0.6;
+}
+
+.values-section .value-item:hover::before {
+    transform: scale(1);
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+    .values-section .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .values-section .value-item {
+        max-width: 100%;
+    }
+}
+
+
   </style>
   </head>
 
@@ -110,7 +223,7 @@
         <a href="index.html" class="logo d-flex align-items-center me-auto">
           <!-- Uncomment the line below if you also wish to use an image logo -->
           <!-- <img src="assets/img/logo.png" alt=""> -->
-          <h1 class="sitename">DimCargo</h1>
+          <img src="assets/img/Logo fix.png" alt="">
         </a>
 
         <nav id="navmenu" class="navmenu">
@@ -170,8 +283,7 @@
             <div class="col-lg-6 content order-last order-lg-first" data-aos="fade-up" data-aos-delay="100">
               <h3>About Us</h3>
               <p>
-                Dimcargo As an International Freight Forwarder and NVOCC Operators service provider, Dimcargo is committed to providing high quality services and economical shipping rates, meeting the needs of traders and shippers
-                throughout the world.
+                Dimcargo We established on 2020 As Professional International Freight Forwarder (N.V.O.C.C) company in the freighting business, our main objective is providing the most dedicated quality service and economical freight rates that is highly demanded by world traders and shippers today. DimCargo provides professional consultation and advice to customer in the best possible way to ship their valuable cargoes by containerised vessels, LCL Consolidation and Air freight world wide.
               </p>
               <!-- <ul>
                 <li>
@@ -211,11 +323,10 @@
 
             <!-- Konten di sebelah kanan pada layar besar -->
             <div class="col-lg-6 content order-lg-last order-first" data-aos="fade-up" data-aos-delay="100">
-              <h3>Cargo History</h3>
+              <h3>Our Goal And Our Commitment</h3>
               <p>
-                Kami menyediakan konsultasi profesional untuk membantu pelanggan dalam pengiriman kargo bernilai mereka menggunakan kapal kontainer, konsolidasi LCL, dan pengiriman udara secara global. Tujuan kami adalah memberikan
-                kemudahan operasi dan daya saing biaya untuk kebutuhan bisnis pelanggan kami, dengan fokus pada kepuasan pelanggan dan kualitas layanan. Kami percaya bahwa hubungan yang kuat dengan klien kami memungkinkan kami untuk
-                memahami dan memenuhi kebutuhan bisnis strategis mereka. Temukan solusi yang tepat untuk kebutuhan logistik Anda bersama kami.
+               Our goal is to provide our valued customers the assurance of ease of operation and cost competitiveness for their business needs. We look forward to the opportunity to demonstrate our commitment to customer satisfaction and service quality.
+               And Our Teams passion for learning and growth energizes our goal for service effectiveness and success. We thrive for quality service and commitment. We continuously expand relationships and form partnerships. Building a strong working relationship with our clientele enables us to understand and meet their strategic business requirements and demands. We strongly believe that you will find in us the right services and solutions for your logistics needs.
               </p>
             </div>
           </div>
@@ -223,7 +334,7 @@
       </section>
 
       <!-- Stats Section -->
-      <section id="vision-mission" class="vision-mission section" style="background: linear-gradient(135deg, #007bff 0%, #6c757d 100%); padding: 60px 0;">
+      <section id="vision-mission" class="vision-mission section" style="background: linear-gradient(135deg, #007bff 0%, #6c757d 100%); padding: 60px 0;" >
     <div class="container">
         <div class="row">
             <!-- Kolom Visi -->
@@ -267,24 +378,52 @@
 
       <!-- /Stats Section -->
 
-      <!-- Team Section -->
-      <section id="team" class="team section">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <span>Our Team<br /></span>
-          <h2>Our Team DimCargo</h2>
-        </div>
-        <!-- End Section Title -->
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-4 col-md-6 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
-              <div class="member text-center">
-                <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="Team Member" />
-              </div>
+  <!-- Team Section -->
+<section id="values" class="values-section">
+    <div class="container">
+        <div class="row">
+            <!-- Item 1 -->
+            <div class="value-item">
+                <div class="text-container">
+                    <h3>G</h3>
+                    <h4>GRATITUDE</h4>
+                    <hr>
+                    <p>WE ARE ALWAYS THANKFUL TO GOD.</p>
+                </div>
             </div>
-          </div>
+            <!-- Item 2 -->
+            <div class="value-item">
+                <div class="text-container">
+                    <h3>G</h3>
+                    <h4>GLORIFY</h4>
+                    <hr>
+                    <p>GLORIFY GOD IN ALL THINGS.</p>
+                </div>
+            </div>
+            <!-- Item 3 -->
+            <div class="value-item">
+                <div class="text-container">
+                    <h3>S</h3>
+                    <h4>SERIOUSLY</h4>
+                    <hr>
+                    <p>SERIOUSLY TO DO THE WORK.</p>
+                </div>
+            </div>
+            <!-- Item 4 -->
+            <div class="value-item">
+                <div class="text-container">
+                    <h3>P</h3>
+                    <h4>PRAY</h4>
+                    <hr>
+                    <p>ALWAYS PRAY AT ANY TIME.</p>
+                </div>
+            </div>
+            <!-- Item 5 -->
         </div>
-      </section>
+    </div>
+</section>
+
+
 
       <!-- /Team Section -->
 
