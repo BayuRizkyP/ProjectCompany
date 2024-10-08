@@ -6,14 +6,14 @@ deployment:
     - /bin/cp style.css $DEPLOYPATH
     - /bin/cp asset-r assets $DEPLOYPATH
     - /bin/cp asset-r forms $DEPLOYPATH
-    - /bin/cp AirFreight.html $DEPLOYPATH
+    # - /bin/cp AirFreight.html $DEPLOYPATH
     - /bin/cp About.html $DEPLOYPATH
-    - /bin/cp contact.html $DEPLOYPATH
-    - /bin/cp FreightForwarder.html $DEPLOYPATH
+    # - /bin/cp Contact.html $DEPLOYPATH
+    # - /bin/cp FreightForwarder.html $DEPLOYPATH
     - /bin/cp get-a-quote.html $DEPLOYPATH
-    - /bin/cp Ourclient.html $DEPLOYPATH
-    - /bin/cp PackingAndMoving.html $DEPLOYPATH
-    - /bin/cp SeaFreight.html $DEPLOYPATH
-    - /bin/cp SpecialService $DEPLOYPATH
-    - /bin/cp Warehousing.html $DEPLOYPATH
-        
+    - /bin/cp OurClient.html $DEPLOYPATH
+    - /bin/cp Service.html $DEPLOYPATH
+    # - /bin/cp PackingAndMoving.html $DEPLOYPATH
+    # - /bin/cp SeaFreight.html $DEPLOYPATH
+    # - /bin/cp SpecialService $DEPLOYPATH
+    # - /bin/cp Warehousing.html $DEPLOYPATH
