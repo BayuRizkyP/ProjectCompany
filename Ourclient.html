@@ -19,6 +19,7 @@
       rel="stylesheet"
     />
   <style>
+    
 .onlytrucking {
     background-color: #e9ecef; /* Warna latar belakang untuk section */
     padding: 60px 0; /* Ruang atas dan bawah section */
@@ -68,6 +69,190 @@
     transform: translateX(-50%) translateY(0); /* Gerakan ke bawah saat hover */
 }
 
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.section {
+    padding: 50px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #1a1a1a;
+}
+
+.section-title span {
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: #777;
+}
+
+/* Photo Container */
+/* Photo Container */
+/* Photo Container */
+.photo-container {
+    display: flex;
+    justify-content: center; /* Memusatkan kontainer foto */
+    margin-bottom: 50px;
+}
+
+.middle {
+    display: flex;
+    justify-content: flex-start; /* Memulai gambar dari kiri ke kanan */
+}
+
+.middle img {
+    width: 150px; /* Ukuran gambar */
+    height: auto;
+    opacity: 0;
+    transform: translateX(-50px); /* Posisi awal di luar layar */
+    animation: slideIn 1s forwards; /* Animasi masuk dari kiri */
+}
+
+/* Memberikan margin pada semua gambar kecuali yang terakhir */
+.middle img:not(:last-child) {
+    margin-right: 20px; /* Jarak antar gambar */
+}
+
+.middle img:nth-child(2) {
+    animation-delay: 0.3s; /* Delay untuk gambar kedua */
+}
+
+.middle img:nth-child(3) {
+    animation-delay: 0.6s; /* Delay untuk gambar ketiga */
+}
+
+/* Keyframes untuk animasi slide-in */
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0); /* Gambar bergerak ke posisi aslinya */
+    }
+}
+
+/* Hover effect */
+.middle img:hover {
+    transform: scale(1.1); /* Memperbesar gambar saat hover */
+    transition: transform 0.3s ease;
+}
+
+
+/* Stats Section */
+/* Stats Section */
+.stats {
+    display: flex;
+    justify-content: center; /* Memusatkan statistik */
+    margin-top: 50px;
+}
+
+.stats .col-md-2 {
+    padding: 20px;
+    text-align: center; /* Memusatkan teks dalam kolom */
+    background-color: #ffffff; /* Latar belakang putih */
+    border-radius: 12px; /* Membulatkan tepi */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan lembut */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transisi untuk efek hover */
+    margin: 10px; /* Memberikan jarak antar kolom */
+}
+
+/* Efek hover pada kolom statistik */
+.stats .col-md-2:hover {
+    transform: translateY(-10px); /* Mengangkat kolom sedikit */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Bayangan lebih besar saat hover */
+}
+
+/* Ikon Statistik */
+.stats .icon {
+    font-size: 50px; /* Ukuran ikon lebih besar */
+    color: #007bff;
+    margin-bottom: 15px;
+    animation: bounce 2s infinite; /* Animasi bounce */
+}
+
+/* Animasi untuk ikon */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Animasi untuk angka statistik */
+.stats h2 {
+    font-size: 56px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+    animation: fadeIn 1s ease-in-out; /* Animasi fade-in */
+}
+
+/* Efek hover pada angka */
+.stats .col-md-2:hover h2 {
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+/* Animasi Fade-In untuk angka */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Teks deskripsi */
+.stats p {
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #666;
+    margin-bottom: 0;
+    animation: slideIn 1.5s ease-in-out; /* Animasi slide-in */
+}
+
+/* Animasi Slide-In untuk deskripsi */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Efek hover pada teks deskripsi */
+.stats .col-md-2:hover p {
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
 
 </style>
     <!-- Vendor CSS Files -->
@@ -91,9 +276,9 @@
   </head>
 
   <body class="pricing-page">
-    <header id="header" class="header d-flex align-items-center fixed-top">
+     <header id="header" class="header d-flex align-items-center fixed-top">
       <div class="container-fluid container-xl position-relative d-flex align-items-center">
-        <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <a href="/index.html" class="logo d-flex align-items-center me-auto">
           <!-- Uncomment the line below if you also wish to use an image logo -->
           <!-- <img src="assets/img/logo.png" alt=""> -->
           <img src="assets/img/Logo fix.png" alt="">
@@ -102,25 +287,24 @@
         <nav id="navmenu" class="navmenu">
           <ul>
             <li>
-              <a href="index.html">Home<br /></a>
+              <a href="/index.html">Home<br /></a>
             </li>
             <li><a href="about.html">About</a></li>
-            <li class="dropdown">
-              <a href="#">Services <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
-                <li><a href="SpecialService.html">Special Service</a></li>
-                <li><a href="SeaFreight.html">Sea Freight</a></li>
-                <li><a href="AirFreight.html">Air Freight</a></li>
-                <li><a href="FreightForwarder.html">Freight Forwarder</a></li>
-                <li><a href="PackingAndMoving.html">Packing And Moving</a></li>
-                <li><a href="Warehousing.html">Warhousing And Handling Shipment</a></li>
-              </ul>
+            <li ><a href="Service.html">Services</i></a>
+                  <!-- <ul>
+                    <li><a href="SpecialService.html">Special Service</a></li>
+                    <li><a href="SeaFreight.html">Sea Freight</a></li>
+                    <li><a href="AirFreight.html">Air Freight</a></li>
+                    <li><a href="FreightForwarder.html">Freight Forwarder</a></li>
+                    <li><a href="PackingAndMoving.html">Packing And Moving</a></li>
+                    <li><a href="Warehousing.html">Warhousing And Handling Shipment</a></li>
+                  </ul> -->
             </li>
             <li><a href="OurClient.html" class="active">Our Client</a></li>
             <li>
               <a href="OurGallery.html"><span>Our Gallery</span></a>
             </li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="Contact.html">Contact</a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
@@ -382,24 +566,59 @@
 </section>
 
       <!-- /Alt Pricing Section -->
-      <section id="alt-pricing" class="alt-pricing section">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <span>OUR SUPPLIERS – TRUSTED NETWORKS<br /></span>
-          <h2>OUR SUPPLIERS – TRUSTED NETWORKS</h2>
+  <section id="alt-pricing" class="alt-pricing section">
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+        <span>OUR SUPPLIERS – TRUSTED NETWORKS<br /></span>
+        <h2>OUR SUPPLIERS – TRUSTED NETWORKS</h2>
+    </div>
+    <!-- End Section Title -->
+
+    <!-- Photo Container -->
+    <div class="photo-container">
+        <div class="photo middle">
+            <img src="assets/img/t1.png">
+            <img src="assets/img/t2.png">
+            <img src="assets/img/t3.png">
         </div>
-        <!-- End Section Title -->
-      </section>
+    </div>
+    <!-- End Photo Container -->
+
+    <!-- Stats Section -->
+    <div class="row text-center stats">
+        <div class="col-md-2 offset-md-1">
+            <i class="bi bi-truck icon"></i>
+            <h2>741</h2>
+            <p>TRUCKING</p>
+        </div>
+        <div class="col-md-2">
+            <i class="bi bi-send icon"></i>
+            <h2>513</h2>
+            <p>EXPORT</p>
+        </div>
+        <div class="col-md-2">
+            <i class="bi bi-airplane icon"></i>
+            <h2>1024</h2>
+            <p>IMPORT</p>
+        </div>
+        <div class="col-md-2">
+            <i class="bi bi-geo-alt icon"></i>
+            <h2>0</h2>
+            <p>CANCELED</p>
+        </div>
+    </div>
+    <!-- End Stats Section -->
+</section>
     </main>
 
-    <footer id="footer" class="footer dark-background">
+ <footer id="footer" class="footer dark-background">
       <div class="container footer-top">
         <div class="row gy-4">
           <div class="col-lg-5 col-md-12 footer-about">
             <a href="index.html" class="logo d-flex align-items-center">
               <span class="sitename">DimCargo</span>
             </a>
-            <p>slogan.</p>
+            <p>Your reliable partner in freight forwarding.</p>
             <div class="social-links d-flex mt-4">
               <a href=""><i class="bi bi-twitter-x"></i></a>
               <a href="https://www.facebook.com/search/top?q=citta%20abadi%20ugraha"><i class="bi bi-facebook"></i></a>
@@ -411,24 +630,12 @@
           <div class="col-lg-2 col-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Our Client</a></li>
-              <li><a href="#">Our Gallery</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-2 col-6 footer-links">
-            <h4>Services</h4>
-            <ul>
-              <li><a href="#">Special Freight</a></li>
-              <li><a href="#">Sea Freight</a></li>
-              <li><a href="#">Air Freight</a></li>
-              <li><a href="#">Freight Forwarder</a></li>
-              <li><a href="#">Packing And Moving</a></li>
-              <li><a href="#">Warehousing  And Handling Shipment</a></li>
+              <li><a href="/index.html">Home</a></li>
+              <li><a href="about.html">About us</a></li>
+              <li><a href="Service.html">Services</a></li>
+              <li><a href="OurClient.html">Our Client</a></li>
+              <li><a href="OurGallery.html">Our Gallery</a></li>
+              <li><a href="Contact.html">Contact</a></li>
             </ul>
           </div>
 
@@ -448,7 +655,7 @@
           <!-- You can delete the links only if you've purchased the pro version. -->
           <!-- Licensing information: https://bootstrapmade.com/license/ -->
           <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-       by <a href="#">Bayu Rizky Prayinusa</a>
+       by <a href="https://www.linkedin.com/in/bayurizkyprayinusa/">Bayu Rizky Prayinusa</a>
         </div>
       </div>
     </footer>
