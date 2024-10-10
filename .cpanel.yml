@@ -8,9 +8,9 @@ deployment:
     - /bin/cp asset-r forms $DEPLOYPATH
     # - /bin/cp AirFreight.html $DEPLOYPATH
     - /bin/cp About.html $DEPLOYPATH
-    # - /bin/cp Contact.html $DEPLOYPATH
+    - /bin/cp Contact.html $DEPLOYPATH
     # - /bin/cp FreightForwarder.html $DEPLOYPATH
-    - /bin/cp get-a-quote.html $DEPLOYPATH
+    # - /bin/cp get-a-quote.html $DEPLOYPATH
     - /bin/cp OurClient.html $DEPLOYPATH
     - /bin/cp Service.html $DEPLOYPATH
     # - /bin/cp PackingAndMoving.html $DEPLOYPATH
