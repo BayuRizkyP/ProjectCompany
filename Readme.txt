@@ -1,6 +1,4 @@
-Thanks for downloading this template!
+# Dim-Cargo
 
-Template Name: Logis
-Template URL: https://bootstrapmade.com/logis-bootstrap-logistics-website-template/
-Author: BootstrapMade.com
-License: https://bootstrapmade.com/license/
+Company Profille Dimcargo
+Bayu Rizky Prayinusa

@@ -1,0 +1,23 @@
+<IfModule mod_rewrite.c>
+DirectoryIndex index.html
+# Mengaktifkan Rewrite Engine
+RewriteEngine On
+
+# Arahkan semua permintaan ke halaman home (index.html)
+DirectoryIndex index.html
+
+
+# Jika URL yang diminta tidak ada (bukan file atau direktori yang valid)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Arahkan semua permintaan yang tidak ditemukan ke index.html (halaman Home)
+RewriteRule ^(.*)$ /index.html [L]
+RewriteRule . /index.html [L]
+RewriteRule ^Home$ index.html
+RewriteRule ^About Us$ about.html
+RewriteRule ^Our Service$ Service.html
+RewriteRule ^Our Client$ OurClient.html
+RewriteRule ^Gallery$ OurGallery.html
+RewriteRule ^Contact$ Contact.html
+</IfModule>
